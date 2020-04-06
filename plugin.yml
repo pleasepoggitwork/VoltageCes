@@ -1,4 +1,4 @@
-name: PiggyCustomEnchants
+name: PiggyCustomEnchant
 main: DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants
 version: 2.1.2
 api: 3.11.2
