@@ -1,0 +1,15 @@
+parameters:
+  paths:
+    - /source/src
+  level: 7
+  autoload_files:
+    - phar:///pocketmine/PocketMine-MP.phar/vendor/autoload.php
+  autoload_directories:
+    - /source/src
+    - /deps
+  excludes_analyse:
+    - /source/src/DaPigGuy/PiggyCustomEnchants/libs
+  reportUnmatchedIgnoredErrors: false
+  checkMissingIterableValueType: false
+  ignoreErrors:
+    - "#Strict comparison using === between pocketmine\\\\inventory\\\\PlayerInventory and null will always evaluate to false.#"
