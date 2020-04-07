@@ -27,7 +27,7 @@ class DodgeEnchant extends ReactiveEnchantment
 
     public function getDefaultExtraData(): array
     {
-        return ["absorbedDamageMultiplier" => 100];
+        return ["absorbedDamageMultiplier" => 0.50];
     }
 
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
