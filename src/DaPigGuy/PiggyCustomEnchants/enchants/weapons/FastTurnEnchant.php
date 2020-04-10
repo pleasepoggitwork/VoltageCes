@@ -18,6 +18,12 @@ class FastTurnEnchant extends ReactiveEnchantment
 {
     /** @var string */
     public $name = "FastTurn";
+    
+    /** @var int */
+    public $rarity = CustomEnchant::RARITY_EPIC;
+    /** @var int */
+    public $maxLevel = 2;
+    
     /** @var int */
     public $itemType = CustomEnchant::ITEM_TYPE_SWORD;
 
