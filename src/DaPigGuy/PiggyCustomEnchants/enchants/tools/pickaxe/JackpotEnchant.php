@@ -18,7 +18,7 @@ class JackpotEnchant extends ReactiveEnchantment
     /** @var string */
     public $name = "Jackpot";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_MYTHIC;
+    public $rarity = CustomEnchant::RARITY_LEGENDARY;
 
     /** @var int */
     public $itemType = CustomEnchant::ITEM_TYPE_PICKAXE;
