@@ -19,7 +19,7 @@ class CriticalEnchant extends ReactiveEnchantment
     /** @var string */
     public $name = "Critical";
     
-        /** @var int */
+    /** @var int */
     public $rarity = CustomEnchant::RARITY_EPIC;
     /** @var int */
     public $maxLevel = 2;
