@@ -30,12 +30,14 @@ class ExecuteEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageEvent) {
-            $entity = $event->getEntity();
-            if ($entity->getHealth() - $event->getFinalDamage() <= 4) {
-                $event->setModifier($this->extraData["base"] + $level * $this->extraData["multiplier"], CustomEnchantIds::EXECUTE);
-                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::BOLD . TextFormat::GOLD . "Execute" . TextFormat::RESET . TextFormat::GRAY . "•");
-                $this->setCooldown($player, $this->extraData["cooldown"]);
+            if ($player instanceof Player) {
+                $entity = $event->getEntity();
+                if ($entity->getHealth() - $event->getFinalDamage() <= 4) {
+                    $event->setModifier($this->extraData["base"] + $level * $this->extraData["multiplier"], CustomEnchantIds::EXECUTE);
+                    $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::BOLD . TextFormat::GOLD . "Execute" . TextFormat::RESET . TextFormat::GRAY . "•");
+                    $this->setCooldown($player, $this->extraData["cooldown"]);
+                }
             }
-        }
-    }    
+        }    
+    }
 }
