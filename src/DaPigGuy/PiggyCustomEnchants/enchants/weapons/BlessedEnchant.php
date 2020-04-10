@@ -16,8 +16,12 @@ class BlessedEnchant extends ReactiveEnchantment
 {
     /** @var string */
     public $name = "Blessed";
+    
+        /** @var int */
+    public $rarity = CustomEnchant::RARITY_EPIC;
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    public $maxLevel = 3;
+    
     /** @var int */
     public $itemType = CustomEnchant::ITEM_TYPE_AXE;
 
