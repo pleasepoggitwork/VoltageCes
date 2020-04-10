@@ -18,6 +18,11 @@ class InfernoEnchant extends ReactiveEnchantment
 {
     /** @var string */
     public $name = "Inferno";
+    
+        /** @var int */
+    public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    /** @var int */
+    public $maxLevel = 2;
 
     /** @var int */
     public $usageType = CustomEnchant::TYPE_ARMOR_INVENTORY;
