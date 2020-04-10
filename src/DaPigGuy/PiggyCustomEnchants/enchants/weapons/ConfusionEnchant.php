@@ -20,7 +20,9 @@ class ConfusionEnchant extends ReactiveEnchantment
     /** @var string */
     public $name = "Confusion";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    public $rarity = CustomEnchant::RARITY_COMMON;
+    /** @var int */
+    public $maxLevel = 1;
 
     public function getDefaultExtraData(): array
     {
