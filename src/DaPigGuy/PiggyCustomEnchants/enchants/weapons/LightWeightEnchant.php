@@ -32,10 +32,12 @@ class LightWeightEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            if ($player->hasEffect(Effect::SPEED) !== true) {
-                $effect = new EffectInstance(Effect::getEffect(Effect::SPEED), $this->extraData["duration"], $level * $this->extraData["amplifierMultiplier"] + $this->extraData["baseAmplifier"], false);
-                $player->addEffect($effect);
-                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Light Weight" . TextFormat::RESET . TextFormat::GRAY . "•");
+            if ($player instanceof Player) {
+                if ($player->hasEffect(Effect::SPEED) !== true) {
+                    $effect = new EffectInstance(Effect::getEffect(Effect::SPEED), $this->extraData["duration"], $level * $this->extraData["amplifierMultiplier"] + $this->extraData["baseAmplifier"], false);
+                    $player->addEffect($effect);
+                    $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Light Weight" . TextFormat::RESET . TextFormat::GRAY . "•");
+                }
             }
         }
     }
