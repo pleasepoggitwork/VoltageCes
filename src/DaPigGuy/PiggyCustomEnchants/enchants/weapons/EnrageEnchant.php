@@ -36,13 +36,15 @@ class EnrageEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageEvent) {
-            if ($player->getHealth() - $event->getFinalDamage() <= 4) {
-                if (!$player->hasEffect(Effect::STRENGTH)) {
-                    $effect = new EffectInstance(Effect::getEffect(Effect::STRENGTH), $this->extraData["strengthDurationMultiplier"] * $level, $level * $this->extraData["strengthAmplifierMultiplier"] + $this->extraData["strengthBaseAmplifier"], false);
-                    $player->addEffect($effect);
+            if ($player instanceof Player) {
+                if ($player->getHealth() - $event->getFinalDamage() <= 4) {
+                    if (!$player->hasEffect(Effect::STRENGTH)) {
+                        $effect = new EffectInstance(Effect::getEffect(Effect::STRENGTH), $this->extraData["strengthDurationMultiplier"] * $level, $level * $this->extraData["strengthAmplifierMultiplier"] + $this->extraData["strengthBaseAmplifier"], false);
+                        $player->addEffect($effect);
+                    }
+                    $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GOLD . TextFormat::BOLD . "Enrage" . TextFormat::RESET . TextFormat::GRAY . "•");
+                    $this->setCooldown($player, $this->extraData["cooldown"]);
                 }
-                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GOLD . TextFormat::BOLD . "Enrage" . TextFormat::RESET . TextFormat::GRAY . "•");
-                $this->setCooldown($player, $this->extraData["cooldown"]);
             }
         }
     }
