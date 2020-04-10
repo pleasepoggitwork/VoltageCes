@@ -72,6 +72,7 @@ use DaPigGuy\PiggyCustomEnchants\enchants\weapons\ViperEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\CriticalEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\FastTurnEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\weapons\BlindEnchant;
+use DaPigGuy\PiggyCustomEnchants\utils\Utils;
 use pocketmine\entity\Effect;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\item\enchantment\Enchantment;
