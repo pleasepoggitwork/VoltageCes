@@ -19,6 +19,11 @@ class DamageLimiterEnchant extends ReactiveEnchantment
 {
     /** @var string */
     public $name = "DamageLimiter";
+    
+    /** @var int */
+    public $rarity = CustomEnchant::RARITY_EPIC;
+    /** @var int */
+    public $maxLevel = 5;
 
     /** @var int */
     public $usageType = CustomEnchant::TYPE_ARMOR_INVENTORY;
