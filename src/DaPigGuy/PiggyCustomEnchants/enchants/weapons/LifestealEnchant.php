@@ -17,7 +17,9 @@ class LifestealEnchant extends ReactiveEnchantment
     /** @var string */
     public $name = "Lifesteal";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_COMMON;
+    public $rarity = CustomEnchant::EPIC;
+    /** @var int */
+    public $maxLevel = 3;
 
 
     public function getDefaultExtraData(): array
