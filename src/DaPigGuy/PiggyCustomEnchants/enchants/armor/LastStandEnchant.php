@@ -17,7 +17,9 @@ class LastStandEnchant extends ReactiveEnchantment
     /** @var string */
     public $name = "LastStand";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_COMMON;
+    public $rarity = CustomEnchant::RARITY_EPIC;
+    /** @var int */
+    public $maxLevel = 2;
   
     /** @var int */
     public $usageType = CustomEnchant::TYPE_ARMOR_INVENTORY;
