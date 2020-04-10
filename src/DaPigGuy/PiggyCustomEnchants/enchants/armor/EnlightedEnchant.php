@@ -20,6 +20,8 @@ class EnlightedEnchant extends ReactiveEnchantment
     public $name = "Enlighted";
     /** @var int */
     public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    /** @var int */
+    public $maxLevel = 2;
 
     /** @var int */
     public $usageType = CustomEnchant::TYPE_ARMOR_INVENTORY;
