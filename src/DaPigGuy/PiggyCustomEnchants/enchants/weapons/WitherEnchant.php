@@ -32,11 +32,13 @@ class WitherEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            $entity = $event->getEntity();
-            if (!$entity->hasEffect(Effect::WITHER)) {
-                $effect = new EffectInstance(Effect::getEffect(Effect::WITHER), $this->extraData["witherDurationMultiplier"] * $level, $level * $this->extraData["witherAmplifierMultiplier"] + $this->extraData["witherBaseAmplifier"], false);
-                $entity->addEffect($effect);
-                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Wither" . TextFormat::RESET . TextFormat::GRAY . "•");
+            if ($player instanceof Player) {
+                $entity = $event->getEntity();
+                if (!$entity->hasEffect(Effect::WITHER)) {
+                    $effect = new EffectInstance(Effect::getEffect(Effect::WITHER), $this->extraData["witherDurationMultiplier"] * $level, $level * $this->extraData["witherAmplifierMultiplier"] + $this->extraData["witherBaseAmplifier"], false);
+                    $entity->addEffect($effect);
+                    $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Wither" . TextFormat::RESET . TextFormat::GRAY . "•");
+                }
             }
         }
     }
