@@ -6,7 +6,6 @@ namespace DaPigGuy\PiggyCustomEnchants\enchants;
 
 use DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants;
 use DaPigGuy\PiggyCustomEnchants\utils\Utils;
-use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant::RARITY_EPIC;
 use pocketmine\item\enchantment\Enchantment;
 use pocketmine\Player;
 use ReflectionClass;
