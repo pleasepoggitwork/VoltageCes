@@ -15,9 +15,9 @@ class OverloadEnchant extends ToggleableEnchantment
     /** @var string */
     public $name = "Overload";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_MYTHIC;
+    public $rarity = CustomEnchant::RARITY_EPIC;
     /** @var int */
-    public $maxLevel = 3;
+    public $maxLevel = 2;
 
     /** @var int */
     public $usageType = CustomEnchant::TYPE_ARMOR_INVENTORY;
