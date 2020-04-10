@@ -6,6 +6,7 @@ namespace DaPigGuy\PiggyCustomEnchants\enchants\miscellaneous;
 
 use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\ReactiveEnchantment;
+use DaPigGuy\PiggyCustomEnchants\utils\Utils;
 use pocketmine\event\Event;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\inventory\Inventory;
