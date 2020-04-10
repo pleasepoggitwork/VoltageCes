@@ -30,8 +30,10 @@ class FastTurnEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            $event->setModifier($this->extraData["base"] + $level * $this->extraData["multiplier"], CustomEnchantIds::FASTTURN);
-            $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::RED . TextFormat::AQUA . "Fast Turn" . TextFormat::RESET . TextFormat::GRAY . "•");
+            if ($player instanceof Player) {
+                $event->setModifier($this->extraData["base"] + $level * $this->extraData["multiplier"], CustomEnchantIds::FASTTURN);
+                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::RED . TextFormat::AQUA . "Fast Turn" . TextFormat::RESET . TextFormat::GRAY . "•");
+            }
         }
     }
 }
