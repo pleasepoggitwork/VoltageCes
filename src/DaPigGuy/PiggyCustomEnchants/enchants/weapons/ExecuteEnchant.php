@@ -19,6 +19,12 @@ class ExecuteEnchant extends ReactiveEnchantment
 {
     /** @var string */
     public $name = "Execute";
+    
+    /** @var int */
+    public $rarity = CustomEnchant::RARITY_EPIC;
+    /** @var int */
+    public $maxLevel = 3;
+    
     /** @var int */
     public $itemType = CustomEnchant::ITEM_TYPE_SWORD;
 
