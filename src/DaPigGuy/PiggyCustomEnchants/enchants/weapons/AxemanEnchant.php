@@ -19,7 +19,7 @@ class AxemanEnchant extends ReactiveEnchantment
     /** @var string */
     public $name = "Axeman";
     
-        /** @var int */
+    /** @var int */
     public $rarity = CustomEnchant::RARITY_EPIC;
     /** @var int */
     public $maxLevel = 3;
