@@ -19,6 +19,11 @@ class AdrenlineEnchant extends ReactiveEnchantment
 {
     /** @var string */
     public $name = "Adrenline";
+    
+    /** @var int */
+    public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    /** @var int */
+    public $maxLevel = 1;
 
     /** @var int */
     public $usageType = CustomEnchant::TYPE_BOOTS;
@@ -32,7 +37,7 @@ class AdrenlineEnchant extends ReactiveEnchantment
 
     public function getDefaultExtraData(): array
     {
-        return ["cooldown" => 300, "speedDurationMultiplier" => 200, "speedBaseAmplifier" => 3, "speedAmplifierMultiplier" => 1];
+        return ["cooldown" => 300, "speedDurationMultiplier" => 200, "speedBaseAmplifier" => 2, "speedAmplifierMultiplier" => 1];
     }
 
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
