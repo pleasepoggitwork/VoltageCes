@@ -32,11 +32,13 @@ class BlindEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            $entity = $event->getEntity();
-            if (!$entity->hasEffect(Effect::BLINDNESS)) {
-                $effect = new EffectInstance(Effect::getEffect(Effect::BLINDNESS), $this->extraData["blindnessDurationMultiplier"] * $level, $level * $this->extraData["blindnessAmplifierMultiplier"] + $this->extraData["blindnessBaseAmplifier"], false);
-                $entity->addEffect($effect);
-                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GOLD . TextFormat::BOLD . "Blind" . TextFormat::RESET . TextFormat::GRAY . "•");
+            if ($player instanceof Player) {
+                $entity = $event->getEntity();
+                if (!$entity->hasEffect(Effect::BLINDNESS)) {
+                    $effect = new EffectInstance(Effect::getEffect(Effect::BLINDNESS), $this->extraData["blindnessDurationMultiplier"] * $level, $level * $this->extraData["blindnessAmplifierMultiplier"] + $this->extraData["blindnessBaseAmplifier"], false);
+                    $entity->addEffect($effect);
+                    $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GOLD . TextFormat::BOLD . "Blind" . TextFormat::RESET . TextFormat::GRAY . "•");
+                }
             }
         }
     }
