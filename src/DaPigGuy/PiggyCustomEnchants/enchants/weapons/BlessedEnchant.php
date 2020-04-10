@@ -24,9 +24,11 @@ class BlessedEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            foreach ($player->getEffects() as $effect) {
-                if ($effect->getType()->isBad()) {
-                    $player->removeEffect($effect->getId());
+            if ($player instanceof Player) {
+                foreach ($player->getEffects() as $effect) {
+                    if ($effect->getType()->isBad()) {
+                        $player->removeEffect($effect->getId());
+                    }
                 }
             }
         }
