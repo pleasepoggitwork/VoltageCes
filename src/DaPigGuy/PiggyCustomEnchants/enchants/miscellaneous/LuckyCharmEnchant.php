@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DaPigGuy\PiggyCustomEnchants\enchants\miscellaneous;
 
 use DaPigGuy\PiggyCustomEnchants\CustomEnchantManager;
+use DaPigGuy\PiggyCustomEnchants\utils\Utils;
 use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\ReactiveEnchantment;
 use DaPigGuy\PiggyCustomEnchants\enchants\ToggleableEnchantment;
@@ -17,7 +18,7 @@ class LuckyCharmEnchant extends ToggleableEnchantment
     /** @var string */
     public $name = "Lucky Charm";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_MYTHIC;
+    public $rarity = CustomEnchant::RARITY_UNSTABLE;
     /** @var int */
     public $maxLevel = 3;
 
