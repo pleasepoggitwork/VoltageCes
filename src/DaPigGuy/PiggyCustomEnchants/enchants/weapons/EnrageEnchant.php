@@ -19,6 +19,11 @@ class EnrageEnchant extends ReactiveEnchantment
 {
     /** @var string */
     public $name = "Enrage";
+    
+    /** @var int */
+    public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    /** @var int */
+    public $maxLevel = 1;
 
     /** @var int */
     public $itemType = CustomEnchant::ITEM_TYPE_AXE;
