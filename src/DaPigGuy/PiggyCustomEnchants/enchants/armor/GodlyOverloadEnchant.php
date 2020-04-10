@@ -15,9 +15,9 @@ class GodlyOverloadEnchant extends ToggleableEnchantment
     /** @var string */
     public $name = "GodlyOverload";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_MYTHIC;
+    public $rarity = CustomEnchant::RARITY_LEGENDARY;
     /** @var int */
-    public $maxLevel = 3;
+    public $maxLevel = 2;
 
     /** @var int */
     public $usageType = CustomEnchant::TYPE_ARMOR_INVENTORY;
