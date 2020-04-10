@@ -22,6 +22,8 @@ class ViperEnchant extends ReactiveEnchantment
     /** @var int */
     public $rarity = CustomEnchant::RARITY_UNCOMMON;
     /** @var int */
+    public $maxLevel = 2;
+    /** @var int */
     public $itemType = CustomEnchant::ITEM_TYPE_SWORD;
 
     public function getDefaultExtraData(): array
