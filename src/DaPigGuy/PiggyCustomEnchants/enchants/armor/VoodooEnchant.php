@@ -22,6 +22,8 @@ class VoodooEnchant extends ReactiveEnchantment
     /** @var int */
     public $rarity = CustomEnchant::RARITY_UNCOMMON;
     /** @var int */
+    public $maxLevel = 2;
+    /** @var int */
     public $usageType = CustomEnchant::TYPE_CHESTPLATE;
     /** @var int */
     public $itemType = CustomEnchant::ITEM_TYPE_CHESTPLATE;
