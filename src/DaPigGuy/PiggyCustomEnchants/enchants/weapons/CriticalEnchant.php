@@ -31,8 +31,10 @@ class CriticalEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            $event->setModifier($this->extraData["base"] + $level * $this->extraData["multiplier"], CustomEnchantIds::CRITICAL);
-            $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GOLD . TextFormat::BOLD . "Critical" . TextFormat::RESET . TextFormat::GRAY . "•");
+            if ($player instanceof Player) {
+                $event->setModifier($this->extraData["base"] + $level * $this->extraData["multiplier"], CustomEnchantIds::CRITICAL);
+                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GOLD . TextFormat::BOLD . "Critical" . TextFormat::RESET . TextFormat::GRAY . "•");
+            }
         }
     }
 }
