@@ -21,7 +21,10 @@ class BerserkEnchant extends ReactiveEnchantment
     public $name = "Berserk";
 
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    public $rarity = CustomEnchant::RARITY_EPIC;
+    /** @var int */
+    public $maxLevel = 2;
+    
     /** @var int */
     public $itemType = CustomEnchant::ITEM_TYPE_AXE;
 
