@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DaPigGuy\PiggyCustomEnchants\enchants\miscellaneous;
 
 use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant;
+use DaPigGuy\PiggyCustomEnchants\utils\Utils;
 use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchantIds;
 use DaPigGuy\PiggyCustomEnchants\enchants\ReactiveEnchantment;
 use pocketmine\event\Event;
@@ -19,7 +20,7 @@ class SoulboundEnchant extends ReactiveEnchantment
     /** @var string */
     public $name = "Soulbound";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_MYTHIC;
+    public $rarity = CustomEnchant::RARITY_LEGENDARY;
 
     /** @var int */
     public $usageType = CustomEnchant::TYPE_ANY_INVENTORY;
