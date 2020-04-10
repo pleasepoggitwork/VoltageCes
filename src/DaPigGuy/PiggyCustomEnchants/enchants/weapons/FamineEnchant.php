@@ -31,10 +31,12 @@ class FamineEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            $entity = $event->getEntity();
-            if ($entity instanceof Living) {
-                $entity->setFood($entity->getFood() - ($event->getFinalDamage() * $this->extraData["foodMultiplier"]) > $entity->getMaxFood() ? $entity->getMaxFood() : $entity->getFood() - ($event->getFinalDamage() * $this->extraData["foodMultiplier"]));
-                $this->setCooldown($player, $this->extraData["cooldown"]);
+            if ($player instanceof Player) {
+                $entity = $event->getEntity();
+                if ($entity instanceof Living) {
+                    $entity->setFood($entity->getFood() - ($event->getFinalDamage() * $this->extraData["foodMultiplier"]) > $entity->getMaxFood() ? $entity->getMaxFood() : $entity->getFood() - ($event->getFinalDamage() * $this->extraData["foodMultiplier"]));
+                    $this->setCooldown($player, $this->extraData["cooldown"]);
+                }
             }
         }
     }
