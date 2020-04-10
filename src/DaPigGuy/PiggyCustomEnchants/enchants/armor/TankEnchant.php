@@ -20,6 +20,8 @@ class TankEnchant extends ReactiveEnchantment
     public $name = "Tank";
     /** @var int */
     public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    /** @var int */
+    public $maxLevel = 2;
 
     /** @var int */
     public $usageType = CustomEnchant::TYPE_ARMOR_INVENTORY;
