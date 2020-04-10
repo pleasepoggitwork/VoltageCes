@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DaPigGuy\PiggyCustomEnchants\enchants\armor;
 
 use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant;
+use DaPigGuy\PiggyCustomEnchants\utils\Utils;
 use DaPigGuy\PiggyCustomEnchants\enchants\ReactiveEnchantment;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\Event;
