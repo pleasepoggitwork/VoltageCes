@@ -30,11 +30,13 @@ class ConfusionEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            $entity = $event->getEntity();
-            if (!$entity->hasEffect(Effect::NAUSEA)) {
-                $effect = new EffectInstance(Effect::getEffect(Effect::NAUSEA), $this->extraData["nauseaDurationMultiplier"] * $level, $level * $this->extraData["nauseaAmplifierMultiplier"] + $this->extraData["nauseaBaseAmplifier"], false);
-                $entity->addEffect($effect);
-                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GRAY . TextFormat::BOLD . "Confusion" . TextFormat::RESET . TextFormat::GRAY . "•");
+            if ($player instanceof Player) {
+                $entity = $event->getEntity();
+                if (!$entity->hasEffect(Effect::NAUSEA)) {
+                    $effect = new EffectInstance(Effect::getEffect(Effect::NAUSEA), $this->extraData["nauseaDurationMultiplier"] * $level, $level * $this->extraData["nauseaAmplifierMultiplier"] + $this->extraData["nauseaBaseAmplifier"], false);
+                    $entity->addEffect($effect);
+                    $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GRAY . TextFormat::BOLD . "Confusion" . TextFormat::RESET . TextFormat::GRAY . "•");
+                }
             }
         }
     }
