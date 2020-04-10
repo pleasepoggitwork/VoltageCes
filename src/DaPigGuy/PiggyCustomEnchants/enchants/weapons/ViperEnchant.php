@@ -32,11 +32,13 @@ class ViperEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            $entity = $event->getEntity();
-            if (!$entity->hasEffect(Effect::POISON)) {
-                $effect = new EffectInstance(Effect::getEffect(Effect::POISON), $this->extraData["poisonDurationMultiplier"] * $level, $level * $this->extraData["poisonAmplifierMultiplier"] + $this->extraData["poisonBaseAmplifier"], false);
-                $entity->addEffect($effect);
-                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Viper" . TextFormat::RESET . TextFormat::GRAY . "•");
+            if ($player instanceof Player) {
+                $entity = $event->getEntity();
+                if (!$entity->hasEffect(Effect::POISON)) {
+                    $effect = new EffectInstance(Effect::getEffect(Effect::POISON), $this->extraData["poisonDurationMultiplier"] * $level, $level * $this->extraData["poisonAmplifierMultiplier"] + $this->extraData["poisonBaseAmplifier"], false);
+                    $entity->addEffect($effect);
+                    $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Viper" . TextFormat::RESET . TextFormat::GRAY . "•");
+                }
             }
         }
     }
