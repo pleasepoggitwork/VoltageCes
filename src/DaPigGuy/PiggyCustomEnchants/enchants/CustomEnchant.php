@@ -19,7 +19,7 @@ class CustomEnchant extends Enchantment
     /** @var string */
     public $name = "";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_RARE;
+    public $rarity = CustomEnchant::RARITY_COMMON;
     /** @var int */
     public $maxLevel = 5;
     /** @var string */
