@@ -19,7 +19,9 @@ class LightningEnchant extends ReactiveEnchantment
     /** @var string */
     public $name = "Lightning";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_MYTHIC;
+    public $rarity = CustomEnchant::RARITY_LEGENDARY;
+    /** @var int */
+    public $maxLevel = 2;
     /** @var int */
     public $itemType = CustomEnchant::ITEM_TYPE_AXE;
 
