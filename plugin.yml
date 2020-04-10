@@ -12,7 +12,7 @@ permissions:
     children:
       piggycustomenchants.command:
         default: op
-        description: "Allow usage of all PiggyCustomEnchants commands"
+        description: "Allow usage of all PiggyCustomEnchants comands"
         children:
           piggycustomenchants.command.ce:
             default: op
