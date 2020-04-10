@@ -7,6 +7,7 @@ namespace DaPigGuy\PiggyCustomEnchants;
 use CortexPE\Commando\BaseCommand;
 use CortexPE\Commando\exception\HookAlreadyRegistered;
 use CortexPE\Commando\PacketHooker;
+use DaPigGuy\PiggyCustomEnchants\utils\Utils;
 use DaPigGuy\PiggyCustomEnchants\blocks\PiggyObsidian;
 use DaPigGuy\PiggyCustomEnchants\commands\CustomEnchantsCommand;
 use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant;
