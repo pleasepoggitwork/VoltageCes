@@ -37,7 +37,7 @@ class ViperEnchant extends ReactiveEnchantment
         if ($event instanceof EntityDamageByEntityEvent) {
             if ($player instanceof Player) {
                 $entity = $event->getEntity();
-                if (!$entity->hasEffect(Effect::POISON)) {
+                if ($entity instanceof Player) {
                     $effect = new EffectInstance(Effect::getEffect(Effect::POISON), $this->extraData["poisonDurationMultiplier"] * $level, $level * $this->extraData["poisonAmplifierMultiplier"] + $this->extraData["poisonBaseAmplifier"], false);
                     $entity->addEffect($effect);
                     $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Viper" . TextFormat::RESET . TextFormat::GRAY . "•");
