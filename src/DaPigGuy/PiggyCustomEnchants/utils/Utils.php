@@ -50,8 +50,8 @@ class Utils
     const RARITY_NAMES = [
         CustomEnchant::RARITY_COMMON => "Common",
         CustomEnchant::RARITY_UNCOMMON => "Uncommon",
-        CustomEnchant::RARITY_RARE => "Epic",
-        CustomEnchant::RARITY_MYTHIC => "Legendary",
+        CustomEnchant::RARITY_RARE => "Rare",
+        CustomEnchant::RARITY_MYTHIC => "Mythic",
     ];
 
     const INCOMPATIBLE_ENCHANTS = [
