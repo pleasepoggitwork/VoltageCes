@@ -215,11 +215,6 @@ class Utils
         return $enchantments;
     }
 
-    public static function getColorFromRarity(int $rarity): string
-    {
-        return self::getTFConstFromString(CustomEnchantManager::getPlugin()->getConfig()->get("rarity-colors")[strtolower(self::RARITY_NAMES[$rarity])]);
-    }
-
     public static function getTFConstFromString(string $color): string
     {
         $colorConversionTable = [
