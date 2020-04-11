@@ -62,6 +62,7 @@ class CustomEnchant extends Enchantment
     const ITEM_TYPE_LEGGINGS = 13;
     const ITEM_TYPE_BOOTS = 14;
     const ITEM_TYPE_COMPASS = 15;
+    const CUSTOMENCHANT::RARITY_EPIC = "Epic";
 
     /**
      * @throws ReflectionException
@@ -69,6 +70,7 @@ class CustomEnchant extends Enchantment
     public function __construct(PiggyCustomEnchants $plugin, int $id)
     {
         $this->plugin = $plugin;
+        $this->rarity = (int)array_flip(Utils::RARITY_NAMES)[ucfirst(strtolower($plugin->getEnchantmentData($this->name, "rarities", Utils::RARITY_NAMES[$this->rarity])))];
         $this->maxLevel = (int)$plugin->getEnchantmentData($this->name, "max_levels", $this->maxLevel);
         $this->displayName = (string)$plugin->getEnchantmentData($this->name, "display_names", $this->displayName ?? $this->name);
         $this->description = (string)$plugin->getEnchantmentData($this->name, "descriptions", $this->description ?? "");
