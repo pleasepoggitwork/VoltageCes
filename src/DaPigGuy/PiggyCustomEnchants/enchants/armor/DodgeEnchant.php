@@ -22,7 +22,7 @@ class DodgeEnchant extends ReactiveEnchantment
     public $name = "Dodge";
     
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    public $rarity = CustomEnchant::RARITY_COMMON;
     /** @var int */
     public $maxLevel = 1;
 
