@@ -39,8 +39,11 @@ class SwordsmanEnchant extends ReactiveEnchantment
         if ($event instanceof EntityDamageByEntityEvent) {
             $damager = $event->getDamager();
             if ($damager instanceof Player) {
-                if ($damager->getInventory()->getItemInHand() instanceof Axe) {
-                    $event->setModifier($this->extraData["base"] + $level * $this->extraData["multiplier"], CustomEnchantIds::SWORDSMAN);
+                $entity = $event->getEntity();
+                if ($entity instanceof Player) {
+                    if ($damager->getInventory()->getItemInHand() instanceof Axe) {
+                        $event->setModifier($this->extraData["base"] + $level * $this->extraData["multiplier"], CustomEnchantIds::SWORDSMAN);
+                    }
                 }
             }
         }
