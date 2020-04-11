@@ -34,7 +34,7 @@ class FamineEnchant extends ReactiveEnchantment
         if ($event instanceof EntityDamageByEntityEvent) {
             if ($player instanceof Player) {
                 $entity = $event->getEntity();
-                if ($entity instanceof Living) {
+                if ($entity instanceof Player) {
                     $entity->setFood($entity->getFood() - ($event->getFinalDamage() * $this->extraData["foodMultiplier"]) > $entity->getMaxFood() ? $entity->getMaxFood() : $entity->getFood() - ($event->getFinalDamage() * $this->extraData["foodMultiplier"]));
                     $this->setCooldown($player, $this->extraData["cooldown"]);
                 }
