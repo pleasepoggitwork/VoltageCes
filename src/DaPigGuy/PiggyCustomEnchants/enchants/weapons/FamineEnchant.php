@@ -18,7 +18,7 @@ class FamineEnchant extends ReactiveEnchantment
     /** @var string */
     public $name = "Famine";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    public $rarity = CustomEnchant::RARITY_COMMON;
     /** @var int */
     public $maxLevel = 3;
     /** @var int */
