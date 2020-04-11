@@ -20,7 +20,7 @@ class SoulboundEnchant extends ReactiveEnchantment
     /** @var string */
     public $name = "Soulbound";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_LEGENDARY;
+    public $rarity = CustomEnchant::RARITY_MYTHIC;
 
     /** @var int */
     public $usageType = CustomEnchant::TYPE_ANY_INVENTORY;
