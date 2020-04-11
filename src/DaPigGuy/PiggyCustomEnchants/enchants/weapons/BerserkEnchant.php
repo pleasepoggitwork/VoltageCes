@@ -38,7 +38,8 @@ class BerserkEnchant extends ReactiveEnchantment
     {
         if ($event instanceof EntityDamageByEntityEvent) {
             if ($player instanceof Player) {
-                if (!$player->hasEffect(Effect::STRENGTH)) {
+                $entity = $event->getEntity();
+                if ($entity instanceof Player) {
                     $effect = new EffectInstance(Effect::getEffect(Effect::STRENGTH), $this->extraData["strengthDurationMultiplier"] * $level, $level * $this->extraData["strengthAmplifierMultiplier"] + $this->extraData["strengthBaseAmplifier"], false);
                     $player->addEffect($effect);
                     $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GOLD . TextFormat::BOLD . "Berserk" . TextFormat::RESET . TextFormat::GRAY . "•");
