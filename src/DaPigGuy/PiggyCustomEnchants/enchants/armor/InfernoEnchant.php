@@ -39,7 +39,7 @@ class InfernoEnchant extends ReactiveEnchantment
     {
         if ($event instanceof EntityDamageByEntityEvent) {
             $damager = $event->getDamager();
-            if ($damager instanceof Living) {
+            if ($damager instanceof Player) {
                 $this->plugin->getScheduler()->scheduleDelayedTask(new ClosureTask(function () use ($damager, $level): void {
                     if (!$damager->isClosed()) $damager->setOnFire($this->extraData["durationMultiplier"] * $level);
                 }), 1);
