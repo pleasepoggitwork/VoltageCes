@@ -99,7 +99,7 @@ class CustomEnchantManager
         self::registerEnchantment(new ToggleableEffectEnchant($plugin, CustomEnchantIds::ANTIGRAVITY, "AntiGravity", 1, CustomEnchant::TYPE_BOOTS, CustomEnchant::ITEM_TYPE_BOOTS, Effect::JUMP_BOOST, 2, 0, CustomEnchant::RARITY_UNCOMMON));
 
         self::registerEnchantment(new ArmoredEnchant($plugin, CustomEnchantIds::ARMORED));
-        self::registerEnchantment(new AutoRepairEnchant($plugin, CustomEnchantIds::AUTOREPAIR
+        self::registerEnchantment(new AutoRepairEnchant($plugin, CustomEnchantIds::AUTOREPAIR));
         self::registerEnchantment(new EnlightedEnchant($plugin, CustomEnchantIds::ENLIGHTED));
         self::registerEnchantment(new ImplantsEnchant($plugin, CustomEnchantIds::IMPLANTS));
         self::registerEnchantment(new LifestealEnchant($plugin, CustomEnchantIds::LIFESTEAL));
