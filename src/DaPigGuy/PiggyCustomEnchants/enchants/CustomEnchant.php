@@ -65,6 +65,8 @@ class CustomEnchant extends Enchantment
     const RARITY_EPIC = "Epic";
     const RARITY_LEGENDARY = "Legendary";
     const RARITY_UNSTABLE = "Unstable";
+    const $place1 = "Common";
+    const $place2 = "Rare";
 
     /**
      * @throws ReflectionException
