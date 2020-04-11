@@ -65,8 +65,6 @@ class CustomEnchant extends Enchantment
     const RARITY_EPIC = "Epic";
     const RARITY_LEGENDARY = "Legendary";
     const RARITY_UNSTABLE = "Unstable";
-    const RARITY_COMMON = "Common";
-    const RARITY_RARE = "Rare";
 
     /**
      * @throws ReflectionException
