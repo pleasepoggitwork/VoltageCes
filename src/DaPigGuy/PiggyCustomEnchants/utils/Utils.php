@@ -48,10 +48,10 @@ class Utils
         CustomEnchant::ITEM_TYPE_COMPASS => "Compass",
     ];
     const RARITY_NAMES = [
-        CustomEnchant::RARITY_COMMON => "Uncommon",
-        CustomEnchant::RARITY_UNCOMMON => "Epic",
-        CustomEnchant::RARITY_RARE => "Legendary",
-        CustomEnchant::RARITY_MYTHIC => "Unstable",
+        CustomEnchant::RARITY_COMMON => "Common",
+        CustomEnchant::RARITY_UNCOMMON => "Uncommon",
+        CustomEnchant::RARITY_RARE => "Epic",
+        CustomEnchant::RARITY_MYTHIC => "Legendary",
     ];
 
     const INCOMPATIBLE_ENCHANTS = [
