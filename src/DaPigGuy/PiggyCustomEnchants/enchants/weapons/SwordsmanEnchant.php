@@ -21,7 +21,7 @@ class SwordsmanEnchant extends ReactiveEnchantment
     public $name = "Swordsman";
     
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_EPIC;
+    public $rarity = CustomEnchant::RARITY_RARE;
     /** @var int */
     public $maxLevel = 3;
     
