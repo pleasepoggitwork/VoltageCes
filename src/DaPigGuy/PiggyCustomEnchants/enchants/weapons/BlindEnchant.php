@@ -39,7 +39,7 @@ class BlindEnchant extends ReactiveEnchantment
         if ($event instanceof EntityDamageByEntityEvent) {
             if ($player instanceof Player) {
                 $entity = $event->getEntity();
-                if (!$entity->hasEffect(Effect::BLINDNESS)) {
+                if ($entity instanceof Player) {
                     $effect = new EffectInstance(Effect::getEffect(Effect::BLINDNESS), $this->extraData["blindnessDurationMultiplier"] * $level, $level * $this->extraData["blindnessAmplifierMultiplier"] + $this->extraData["blindnessBaseAmplifier"], false);
                     $entity->addEffect($effect);
                     $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GOLD . TextFormat::BOLD . "Blind" . TextFormat::RESET . TextFormat::GRAY . "•");
