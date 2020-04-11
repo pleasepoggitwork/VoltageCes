@@ -34,12 +34,15 @@ class LightningEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            if ($player instanceof Player) {
-                $lightning = Entity::createEntity("PiggyLightning", $event->getEntity()->getLevel(), Entity::createBaseNBT($event->getEntity()));
-                $lightning->setOwningEntity($player);
-                $lightning->spawnToAll();
-                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::LIGHT_PURPLE . TextFormat::BOLD . "Lightning" . TextFormat::RESET . TextFormat::GRAY . "•");
-                $this->setCooldown($player, $this->extraData["cooldown"]);
+            $entity = $event->getEntity();
+            if ($entiy instanceof Player) {
+                if ($player instanceof Player) {
+                    $lightning = Entity::createEntity("PiggyLightning", $event->getEntity()->getLevel(), Entity::createBaseNBT($event->getEntity()));
+                    $lightning->setOwningEntity($player);
+                    $lightning->spawnToAll();
+                    $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::LIGHT_PURPLE . TextFormat::BOLD . "Lightning" . TextFormat::RESET . TextFormat::GRAY . "•");
+                    $this->setCooldown($player, $this->extraData["cooldown"]);
+                }
             }
         }
     }
