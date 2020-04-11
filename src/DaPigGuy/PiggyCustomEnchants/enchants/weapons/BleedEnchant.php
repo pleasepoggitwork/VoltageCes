@@ -43,20 +43,18 @@ class BleedEnchant extends ReactiveEnchantment
         if ($event instanceof EntityDamageByEntityEvent) {
             if ($player instanceof Player) {
                 $entity = $event->getEntity();
-                if ($entity instaceof Player) {
-                    if (!isset(self::$tasks[$entity->getId()])) {
-                        $endTime = time() + $this->extraData["durationMultiplier"] * $level;
-                        self::$tasks[$entity->getId()] = new ClosureTask(function () use ($entity, $endTime): void {
-                            if (!$entity->isAlive() || $entity->isClosed() || $entity->isFlaggedForDespawn() || $endTime < time()) {
-                                self::$tasks[$entity->getId()]->getHandler()->cancel();
-                                unset(self::$tasks[$entity->getId()]);
-                                return;
-                            }
-                            $entity->attack(new EntityDamageEvent($entity, EntityDamageEvent::CAUSE_MAGIC, $this->extraData["base"] + $entity->getHealth() * $this->extraData["multiplier"]));
-                        });
-                        $this->plugin->getScheduler()->scheduleRepeatingTask(self::$tasks[$entity->getId()], $this->extraData["interval"]);
-                        $this->setCooldown($player, $this->getDefaultExtraData()["cooldown"]);
-                    }
+                if (!isset(self::$tasks[$entity->getId()])) {
+                    $endTime = time() + $this->extraData["durationMultiplier"] * $level;
+                    self::$tasks[$entity->getId()] = new ClosureTask(function () use ($entity, $endTime): void {
+                        if (!$entity->isAlive() || $entity->isClosed() || $entity->isFlaggedForDespawn() || $endTime < time()) {
+                            self::$tasks[$entity->getId()]->getHandler()->cancel();
+                            unset(self::$tasks[$entity->getId()]);
+                            return;
+                        }
+                        $entity->attack(new EntityDamageEvent($entity, EntityDamageEvent::CAUSE_MAGIC, $this->extraData["base"] + $entity->getHealth() * $this->extraData["multiplier"]));
+                    });
+                    $this->plugin->getScheduler()->scheduleRepeatingTask(self::$tasks[$entity->getId()], $this->extraData["interval"]);
+                    $this->setCooldown($player, $this->getDefaultExtraData()["cooldown"]);
                 }
             }
         }
