@@ -45,14 +45,12 @@ class EnrageEnchant extends ReactiveEnchantment
             $entity = $event->getEntity();
             if ($entity instanceof Player) {
                 if ($player instanceof Player) {
-                    if ($player->getHealth() - $event->getFinalDamage() <= 4) {
-                        if (!$player->hasEffect(Effect::STRENGTH)) {
-                            $effect = new EffectInstance(Effect::getEffect(Effect::STRENGTH), $this->extraData["strengthDurationMultiplier"] * $level, $level * $this->extraData["strengthAmplifierMultiplier"] + $this->extraData["strengthBaseAmplifier"], false);
-                            $player->addEffect($effect);
-                        }
+                    if (!$player->hasEffect(Effect::STRENGTH)) {
+                        $effect = new EffectInstance(Effect::getEffect(Effect::STRENGTH), $this->extraData["strengthDurationMultiplier"] * $level, $level * $this->extraData["strengthAmplifierMultiplier"] + $this->extraData["strengthBaseAmplifier"], false);
+                        $player->addEffect($effect);
+                    }
                         $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GOLD . TextFormat::BOLD . "Enrage" . TextFormat::RESET . TextFormat::GRAY . "•");
                         $this->setCooldown($player, $this->extraData["cooldown"]);
-                    }
                 }
             }
         }
