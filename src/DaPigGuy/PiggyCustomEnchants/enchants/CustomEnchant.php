@@ -62,7 +62,6 @@ class CustomEnchant extends Enchantment
     const ITEM_TYPE_LEGGINGS = 13;
     const ITEM_TYPE_BOOTS = 14;
     const ITEM_TYPE_COMPASS = 15;
-    const RARITY_RARE = "Rare";
 
     /**
      * @throws ReflectionException
