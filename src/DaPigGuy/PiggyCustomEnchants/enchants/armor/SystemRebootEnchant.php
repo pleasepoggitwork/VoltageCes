@@ -25,7 +25,7 @@ class SystemRebootEnchant extends ReactiveEnchantment
     public $name = "SystemReboot";
     
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_UNSTABLE;
+    public $rarity = CustomEnchant::RARITY_MYTHIC;
     /** @var int */
     public $maxLevel = 1;
 
