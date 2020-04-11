@@ -32,9 +32,12 @@ class CanabilismEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageByEntityEvent) {
-            if ($player instanceof Player) {
-                $player->setFood($player->getFood() + ($event->getFinalDamage() * $this->extraData["foodMultiplier"]) > $player->getMaxFood() ? $player->getMaxFood() : $player->getFood() + ($event->getFinalDamage() * $this->extraData["foodMultiplier"]));
-                $this->setCooldown($player, $this->extraData["cooldown"]);
+            $entity = $event->getEntity();
+            if ($entity instanceof Player) {
+                if ($player instanceof Player) {
+                    $player->setFood($player->getFood() + ($event->getFinalDamage() * $this->extraData["foodMultiplier"]) > $player->getMaxFood() ? $player->getMaxFood() : $player->getFood() + ($event->getFinalDamage() * $this->extraData["foodMultiplier"]));
+                    $this->setCooldown($player, $this->extraData["cooldown"]);
+                }
             }
         }
     }
