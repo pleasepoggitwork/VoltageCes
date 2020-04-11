@@ -30,7 +30,7 @@ class ToggleableEffectEnchant extends ToggleableEnchantment
     /**
      * @throws ReflectionException
      */
-    public function __construct(PiggyCustomEnchants $plugin, int $id, string $name, int $maxLevel, int $usageType, int $itemType, int $effect, int $baseAmplifier = 0, int $amplifierMultiplier = 1, int $rarity = self::RARITY_RARE)
+    public function __construct(PiggyCustomEnchants $plugin, int $id, string $name, int $maxLevel, int $usageType, int $itemType, int $effect, int $baseAmplifier = 0, int $amplifierMultiplier = 1, int $rarity = self::RARITY_UNCOMMON)
     {
         $this->name = $name;
         $this->rarity = $rarity;
