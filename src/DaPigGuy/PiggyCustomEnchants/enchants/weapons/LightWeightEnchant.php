@@ -36,7 +36,8 @@ class LightWeightEnchant extends ReactiveEnchantment
     {
         if ($event instanceof EntityDamageByEntityEvent) {
             if ($player instanceof Player) {
-                if ($player->hasEffect(Effect::SPEED) !== true) {
+                $entity = $event->getEntity();
+                if ($entity instanceof Player) {
                     $effect = new EffectInstance(Effect::getEffect(Effect::SPEED), $this->extraData["duration"], $level * $this->extraData["amplifierMultiplier"] + $this->extraData["baseAmplifier"], false);
                     $player->addEffect($effect);
                     $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Light Weight" . TextFormat::RESET . TextFormat::GRAY . "•");
