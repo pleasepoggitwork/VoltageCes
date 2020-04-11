@@ -20,7 +20,7 @@ class CanabilismEnchant extends ReactiveEnchantment
     public $name = "Canabilism";
     
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_UNCOMMON;
+    public $rarity = CustomEnchant::RARITY_COMMON;
     /** @var int */
     public $maxLevel = 3;
 
