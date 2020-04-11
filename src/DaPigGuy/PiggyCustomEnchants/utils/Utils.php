@@ -50,7 +50,7 @@ class Utils
     const RARITY_NAMES = [
         CustomEnchant::RARITY_COMMON => "Common",
         CustomEnchant::RARITY_UNCOMMON => "Uncommon",
-        CustomEnchant::RARITY_EPIC => "EPIC",
+        CustomEnchant::RARITY_EPIC => "Epic",
         CustomEnchant::RARITY_LEGENDARY => "Legendary",
         CustomEnchant::RARITY_UNSTABLE => "Unstable",
         CustomEnchant::RARITY_RARE => "Rare",
