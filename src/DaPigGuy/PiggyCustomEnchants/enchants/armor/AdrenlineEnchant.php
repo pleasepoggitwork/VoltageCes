@@ -45,7 +45,8 @@ class AdrenlineEnchant extends ReactiveEnchantment
     {
         if ($event instanceof EntityDamageEvent) {
             if ($player->getHealth() - $event->getFinalDamage() <= 4) {
-                if (!$player->hasEffect(Effect::SPEED)) {
+                $damager = $event->getDamager();
+                if ($damager instanceof Player) {
                     $effect = new EffectInstance(Effect::getEffect(Effect::SPEED), $this->extraData["speedDurationMultiplier"] * $level, $level * $this->extraData["speedAmplifierMultiplier"] + $this->extraData["speedBaseAmplifier"], false);
                     $player->addEffect($effect);
                     $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Adrenline" . TextFormat::RESET . TextFormat::GRAY . "•");
