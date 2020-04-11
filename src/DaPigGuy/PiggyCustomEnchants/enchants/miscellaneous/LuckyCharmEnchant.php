@@ -18,7 +18,7 @@ class LuckyCharmEnchant extends ToggleableEnchantment
     /** @var string */
     public $name = "Lucky Charm";
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_UNSTABLE;
+    public $rarity = CustomEnchant::RARITY_MYTHIC;
     /** @var int */
     public $maxLevel = 3;
 
