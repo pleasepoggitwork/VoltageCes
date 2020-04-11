@@ -35,7 +35,7 @@ class ConfusionEnchant extends ReactiveEnchantment
         if ($event instanceof EntityDamageByEntityEvent) {
             if ($player instanceof Player) {
                 $entity = $event->getEntity();
-                if (!$entity->hasEffect(Effect::NAUSEA)) {
+                if ($entity instanceof Player) {
                     $effect = new EffectInstance(Effect::getEffect(Effect::NAUSEA), $this->extraData["nauseaDurationMultiplier"] * $level, $level * $this->extraData["nauseaAmplifierMultiplier"] + $this->extraData["nauseaBaseAmplifier"], false);
                     $entity->addEffect($effect);
                     $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::GRAY . TextFormat::BOLD . "Confusion" . TextFormat::RESET . TextFormat::GRAY . "•");
