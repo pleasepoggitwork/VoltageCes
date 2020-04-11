@@ -52,8 +52,6 @@ class Utils
         CustomEnchant::RARITY_EPIC => "Epic",
         CustomEnchant::RARITY_LEGENDARY => "Legendary",
         CustomEnchant::RARITY_UNSTABLE => "Unstable",
-        CustomEnchant::RARITY_COMMON => "Common",
-        CustomEnchant::RARITY_RARE => "Rare",
     ];
 
     const INCOMPATIBLE_ENCHANTS = [
