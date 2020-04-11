@@ -37,7 +37,7 @@ class WitherEnchant extends ReactiveEnchantment
         if ($event instanceof EntityDamageByEntityEvent) {
             if ($player instanceof Player) {
                 $entity = $event->getEntity();
-                if (!$entity->hasEffect(Effect::WITHER)) {
+                if ($entity instanceof Player) {
                     $effect = new EffectInstance(Effect::getEffect(Effect::WITHER), $this->extraData["witherDurationMultiplier"] * $level, $level * $this->extraData["witherAmplifierMultiplier"] + $this->extraData["witherBaseAmplifier"], false);
                     $entity->addEffect($effect);
                     $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Wither" . TextFormat::RESET . TextFormat::GRAY . "•");
