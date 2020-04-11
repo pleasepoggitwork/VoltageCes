@@ -26,7 +26,7 @@ permissions:
                 description: "Allow usage of the /customenchant enchant subcommand"
               piggycustomenchants.command.ce.help:
                 default: true
-                description: "Allow usage of the /customenchant help subcommand"
+                description: "Allow usage of the /customenchant hel subcommand"
               piggycustomenchants.command.ce.info:
                 default: true
                 description: "Allow usage of the /customenchant info subcommand"
