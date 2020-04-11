@@ -44,11 +44,13 @@ class AcidBloodEnchant extends ReactiveEnchantment
     public function react(Player $player, Item $item, Inventory $inventory, int $slot, Event $event, int $level, int $stack): void
     {
         if ($event instanceof EntityDamageEvent) {
-            if ($player->getHealth() - $event->getFinalDamage() <= 4) {
-                $damager = $event->getDamager();
-                $effect = new EffectInstance(Effect::getEffect(Effect::POISON), $this->extraData["poisonDurationMultiplier"] * $level, $level * $this->extraData["poisonAmplifierMultiplier"] + $this->extraData["poisonBaseAmplifier"], false);
-                $damager->addEffect($effect);
-                $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Acid Blood" . TextFormat::RESET . TextFormat::GRAY . "•");
+            $damager = $event->getDamager();
+            if ($damager instanceof Player) {
+                if ($player->getHealth() - $event->getFinalDamage() <= 4) {
+                    $effect = new EffectInstance(Effect::getEffect(Effect::POISON), $this->extraData["poisonDurationMultiplier"] * $level, $level * $this->extraData["poisonAmplifierMultiplier"] + $this->extraData["poisonBaseAmplifier"], false);
+                    $damager->addEffect($effect);
+                    $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Acid Blood" . TextFormat::RESET . TextFormat::GRAY . "•");
+                }
             }
         }
     }
