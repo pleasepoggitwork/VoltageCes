@@ -8,7 +8,7 @@ website: "https://github.com/DaPigGuy/PiggyCustomEnchants/"
 permissions:
   piggycustomenchants:
     default: false
-    description: "Allows usage of all PiggyCustomEnchants features"
+    description: "Allows usage of all PiggyCustomEnchants featues"
     children:
       piggycustomenchants.command:
         default: op
