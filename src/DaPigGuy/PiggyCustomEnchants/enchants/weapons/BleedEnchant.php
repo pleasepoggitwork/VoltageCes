@@ -23,7 +23,7 @@ class BleedEnchant extends ReactiveEnchantment
     public $name = "Bleed";
     
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_LEGENDARY;
+    public $rarity = CustomEnchant::RARITY_MYTHIC;
     /** @var int */
     public $maxLevel = 1;
 
