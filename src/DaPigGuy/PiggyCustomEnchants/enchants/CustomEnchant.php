@@ -63,6 +63,8 @@ class CustomEnchant extends Enchantment
     const ITEM_TYPE_BOOTS = 14;
     const ITEM_TYPE_COMPASS = 15;
     const RARITY_EPIC = "Epic";
+    const RARITY_LEGENDARY = "Legendary";
+    const RARITY_UNSTABLE = "Unstable";
 
     /**
      * @throws ReflectionException
