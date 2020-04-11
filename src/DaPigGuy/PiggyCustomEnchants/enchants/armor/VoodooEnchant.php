@@ -38,9 +38,11 @@ class VoodooEnchant extends ReactiveEnchantment
     {
         if ($event instanceof EntityDamageByEntityEvent) {
             $damager = $event->getDamager();
+            if ($damager instanceof Player) {
                 $effect = new EffectInstance(Effect::getEffect(Effect::WEAKNESS), $this->extraData["weaknessDurationMultiplier"] * $level, $level * $this->extraData["weaknessAmplifierMultiplier"] + $this->extraData["weaknessBaseAmplifier"], false);
                 $damager->addEffect($effect);
                 $player->sendMessage(TextFormat::GRAY . "•" . TextFormat::AQUA . TextFormat::BOLD . "Voodoo" . TextFormat::RESET . TextFormat::GRAY . "•");
+            }
         }
     }
 }
