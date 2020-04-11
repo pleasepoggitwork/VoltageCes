@@ -22,7 +22,7 @@ class ExecuteEnchant extends ReactiveEnchantment
     public $name = "Execute";
     
     /** @var int */
-    public $rarity = CustomEnchant::RARITY_EPIC;
+    public $rarity = CustomEnchant::RARITY_RARE;
     /** @var int */
     public $maxLevel = 3;
     
