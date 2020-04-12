@@ -35,7 +35,7 @@ class LightningEnchant extends ReactiveEnchantment
     {
         if ($event instanceof EntityDamageByEntityEvent) {
             $entity = $event->getEntity();
-            if ($entiy instanceof Player) {
+            if ($entity instanceof Player) {
                 if ($player instanceof Player) {
                     $lightning = Entity::createEntity("PiggyLightning", $event->getEntity()->getLevel(), Entity::createBaseNBT($event->getEntity()));
                     $lightning->setOwningEntity($player);
