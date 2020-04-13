@@ -1,6 +1,6 @@
 <?php
 
-namespace DaPigGuy\PiggyCustomEnchants\entities;
+namespace xSuper\PiggyCustomEnchants\entities;
 
 use pocketmine\entity\projectile\Projectile;
 use pocketmine\event\entity\ProjectileHitEvent;
