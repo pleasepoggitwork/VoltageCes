@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants\tasks;
+namespace xSuper\PiggyCustomEnchants\tasks;
 
-use DaPigGuy\PiggyCustomEnchants\CustomEnchantManager;
+use xSuper\PiggyCustomEnchants\CustomEnchantManager;
 use pocketmine\scheduler\AsyncTask;
 use pocketmine\Server;
 use pocketmine\utils\Internet;
