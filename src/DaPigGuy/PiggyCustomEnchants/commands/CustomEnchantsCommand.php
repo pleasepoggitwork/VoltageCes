@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants\commands;
+namespace xSuper\PiggyCustomEnchants\commands;
 
 use CortexPE\Commando\BaseCommand;
 use CortexPE\Commando\BaseSubCommand;
 use CortexPE\Commando\exception\SubCommandCollision;
-use DaPigGuy\PiggyCustomEnchants\commands\subcommands\AboutSubCommand;
-use DaPigGuy\PiggyCustomEnchants\commands\subcommands\EnchantSubCommand;
-use DaPigGuy\PiggyCustomEnchants\commands\subcommands\InfoSubCommand;
-use DaPigGuy\PiggyCustomEnchants\commands\subcommands\ListSubCommand;
-use DaPigGuy\PiggyCustomEnchants\commands\subcommands\NBTSubCommand;
-use DaPigGuy\PiggyCustomEnchants\commands\subcommands\RemoveSubCommand;
-use DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants;
+use xSuper\PiggyCustomEnchants\commands\subcommands\AboutSubCommand;
+use xSuper\PiggyCustomEnchants\commands\subcommands\EnchantSubCommand;
+use xSuper\PiggyCustomEnchants\commands\subcommands\InfoSubCommand;
+use xSuper\PiggyCustomEnchants\commands\subcommands\ListSubCommand;
+use xSuper\PiggyCustomEnchants\commands\subcommands\NBTSubCommand;
+use xSuper\PiggyCustomEnchants\commands\subcommands\RemoveSubCommand;
+use xSuper\PiggyCustomEnchants\PiggyCustomEnchants;
 use jojoe77777\FormAPI\SimpleForm;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
@@ -21,10 +21,10 @@ use pocketmine\utils\TextFormat;
 
 class CustomEnchantsCommand extends BaseCommand
 {
-    /** @var PiggyCustomEnchants */
+    /** @var SuperCustomEnchants */
     private $plugin;
 
-    public function __construct(PiggyCustomEnchants $plugin, string $name, string $description = "", array $aliases = [])
+    public function __construct(SuperCustomEnchants $plugin, string $name, string $description = "", array $aliases = [])
     {
         $this->plugin = $plugin;
         parent::__construct($name, $description, $aliases);
@@ -38,7 +38,7 @@ class CustomEnchantsCommand extends BaseCommand
         if ($sender instanceof Player && $this->plugin->areFormsEnabled()) {
             $form = new SimpleForm(function (Player $player, ?int $data) use ($subcommands): void {
                 if ($data !== null && isset($subcommands[$data])) {
-                    $this->plugin->getServer()->dispatchCommand($player, "ce " . $subcommands[$data]);
+                    $this->plugin->getServer()->dispatchCommand($player, "kce " . $subcommands[$data]);
                 }
             });
             $form->setTitle(TextFormat::GREEN . "PiggyCustomEnchants Menu");
