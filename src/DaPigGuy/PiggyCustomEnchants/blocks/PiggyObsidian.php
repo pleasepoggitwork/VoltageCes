@@ -1,6 +1,6 @@
 <?php
 
-namespace DaPigGuy\PiggyCustomEnchants\blocks;
+namespace xSuper\PiggyCustomEnchants\blocks;
 
 use pocketmine\block\Block;
 use pocketmine\block\Obsidian;
