@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants;
+namespace xSuper\PiggyCustomEnchants;
 
-use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchantIds;
-use DaPigGuy\PiggyCustomEnchants\enchants\ReactiveEnchantment;
-use DaPigGuy\PiggyCustomEnchants\enchants\ToggleableEnchantment;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\DrillerEnchant;
-use DaPigGuy\PiggyCustomEnchants\entities\PiggyTNT;
-use DaPigGuy\PiggyCustomEnchants\utils\ProjectileTracker;
-use DaPigGuy\PiggyCustomEnchants\utils\Utils;
+use xSuper\PiggyCustomEnchants\enchants\CustomEnchantIds;
+use xSuper\PiggyCustomEnchants\enchants\ReactiveEnchantment;
+use xSuper\PiggyCustomEnchants\enchants\ToggleableEnchantment;
+use xSuper\PiggyCustomEnchants\enchants\tools\DrillerEnchant;
+use xSuper\PiggyCustomEnchants\entities\PiggyTNT;
+use xSuper\PiggyCustomEnchants\utils\ProjectileTracker;
+use xSuper\PiggyCustomEnchants\utils\Utils;
 use pocketmine\block\Block;
 use pocketmine\entity\Entity;
 use pocketmine\entity\object\FallingBlock;
@@ -52,7 +52,7 @@ class EventListener implements Listener
     /** @var PiggyCustomEnchants */
     private $plugin;
 
-    public function __construct(PiggyCustomEnchants $plugin)
+    public function __construct(SuperCustomEnchants $plugin)
     {
         $this->plugin = $plugin;
     }
