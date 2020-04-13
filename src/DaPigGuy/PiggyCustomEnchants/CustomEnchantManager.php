@@ -2,64 +2,63 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants;
+namespace xSuper\PiggyCustomEnchants;
 
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\DodgeEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\InfernoEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\AcidBloodEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\DamageLimiterEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\DeflectEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\LastStandEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\PainkillerEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\ArmoredEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\TankEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\EnlightedEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\OverloadEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\GodlyOverloadEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\VoodooEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\AdrenlineEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\SystemRebootEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\armor\helmet\ImplantsEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchantIds;
-use DaPigGuy\PiggyCustomEnchants\enchants\miscellaneous\AutoRepairEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\miscellaneous\LuckyCharmEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\miscellaneous\RadarEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\miscellaneous\SoulboundEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\miscellaneous\ToggleableEffectEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\axes\LumberjackEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\DrillerEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\EnergizingEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\ExplosiveEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\hoe\FarmerEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\hoe\FertilizerEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\hoe\HarvestEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\pickaxe\JackpotEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\QuickeningEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\SmeltingEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\tools\TelepathyEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\BlessedEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\ConditionalDamageMultiplierEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\LacedWeaponEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\LifestealEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\LightningEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\LightWeightEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\SwordsmanEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\CanabilismEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\AxemanEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\FamineEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\EnrageEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\TrapEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\ExecuteEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\ConfusionEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\WitherEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\BerserkEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\BleedEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\ViperEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\CriticalEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\FastTurnEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\weapons\BlindEnchant;
-use DaPigGuy\PiggyCustomEnchants\utils\Utils;
+use xSuper\PiggyCustomEnchants\enchants\armor\DodgeEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\InfernoEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\AcidBloodEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\DamageLimiterEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\DeflectEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\LastStandEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\PainkillerEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\ArmoredEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\TankEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\EnlightedEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\OverloadEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\GodlyOverloadEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\VoodooEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\AdrenlineEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\SystemRebootEnchant;
+use xSuper\PiggyCustomEnchants\enchants\armor\helmet\ImplantsEnchant;
+use xSuper\PiggyCustomEnchants\enchants\CustomEnchant;
+use xSuper\PiggyCustomEnchants\enchants\CustomEnchantIds;
+use xSuper\PiggyCustomEnchants\enchants\miscellaneous\AutoRepairEnchant;
+use xSuper\PiggyCustomEnchants\enchants\miscellaneous\LuckyCharmEnchant;
+use xSuper\PiggyCustomEnchants\enchants\miscellaneous\RadarEnchant;
+use xSuper\PiggyCustomEnchants\enchants\miscellaneous\SoulboundEnchant;
+use xSuper\PiggyCustomEnchants\enchants\miscellaneous\ToggleableEffectEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\axes\LumberjackEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\DrillerEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\EnergizingEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\ExplosiveEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\hoe\FarmerEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\hoe\FertilizerEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\hoe\HarvestEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\pickaxe\JackpotEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\QuickeningEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\SmeltingEnchant;
+use xSuper\PiggyCustomEnchants\enchants\tools\TelepathyEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\BlessedEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\ConditionalDamageMultiplierEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\LacedWeaponEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\LifestealEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\LightningEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\LightWeightEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\SwordsmanEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\CanabilismEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\AxemanEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\FamineEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\EnrageEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\TrapEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\ExecuteEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\ConfusionEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\WitherEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\BerserkEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\BleedEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\ViperEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\CriticalEnchant;
+use xSuper\PiggyCustomEnchants\enchants\weapons\FastTurnEnchant;
+use xSuper\DaPigGuy\PiggyCustomEnchants\utils\Utils;
 use pocketmine\entity\Effect;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\item\enchantment\Enchantment;
@@ -78,7 +77,7 @@ class CustomEnchantManager
     /**
      * @throws ReflectionException
      */
-    public static function init(PiggyCustomEnchants $plugin): void
+    public static function init(SuperCustomEnchants $plugin): void
     {
         self::$plugin = $plugin;
         $vanillaEnchantments = new SplFixedArray(1024);
@@ -137,7 +136,7 @@ class CustomEnchantManager
         self::registerEnchantment(new WitherEnchant($plugin, CustomEnchantIds::WITHER));
     }
 
-    public static function getPlugin(): PiggyCustomEnchants
+    public static function getPlugin(): SuperCustomEnchants
     {
         return self::$plugin;
     }
