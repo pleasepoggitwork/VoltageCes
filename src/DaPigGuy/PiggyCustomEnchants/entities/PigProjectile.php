@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants\entities;
+namespace xSuper\PiggyCustomEnchants\entities;
 
 use pocketmine\entity\Entity;
 use pocketmine\entity\object\ItemEntity;
