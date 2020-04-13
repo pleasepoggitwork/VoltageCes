@@ -19,7 +19,7 @@
 */
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants\utils;
+namespace xSuper\PiggyCustomEnchants\utils;
 
 use InvalidArgumentException;
 use function in_array;
