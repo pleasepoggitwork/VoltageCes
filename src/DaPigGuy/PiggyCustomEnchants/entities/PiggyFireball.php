@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants\entities;
+namespace xSuper\PiggyCustomEnchants\entities;
 
-use DaPigGuy\PiggyCustomEnchants\utils\AllyChecks;
+use xSuper\PiggyCustomEnchants\utils\AllyChecks;
 use pocketmine\block\Block;
 use pocketmine\entity\Entity;
 use pocketmine\event\entity\EntityCombustByEntityEvent;
