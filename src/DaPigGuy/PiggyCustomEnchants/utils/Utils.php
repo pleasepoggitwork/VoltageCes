@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants\utils;
+namespace xSuper\PiggyCustomEnchants\utils;
 
-use DaPigGuy\PiggyCustomEnchants\CustomEnchantManager;
-use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchantIds;
+use xSuper\PiggyCustomEnchants\CustomEnchantManager;
+use xSuper\PiggyCustomEnchants\enchants\CustomEnchant;
+use xSuper\PiggyCustomEnchants\enchants\CustomEnchantIds;
 use jojoe77777\FormAPI\SimpleForm;
 use pocketmine\item\Armor;
 use pocketmine\item\Axe;
@@ -184,7 +184,7 @@ class Utils
                 $item = $item->setCustomName($additionalInformation);
             }
         }
-        if (CustomEnchantManager::getPlugin()->getDescription()->getName() !== "PiggyCustomEnchants" || !in_array("DaPigGuy", CustomEnchantManager::getPlugin()->getDescription()->getAuthors())) $item->setNamedTagEntry(new StringTag("LolGetRekted", "Loser"));
+        if (CustomEnchantManager::getPlugin()->getDescription()->getName() !== "SuperCustomEnchants" || !in_array("xSuper", CustomEnchantManager::getPlugin()->getDescription()->getAuthors())) $item->setNamedTagEntry(new StringTag("LolGetRekted", "Loser"));
         return $item;
     }
 
@@ -282,6 +282,6 @@ class Utils
 
     public static function isCoolKid(PluginDescription $description): bool
     {
-        return $description->getName() === "PiggyCustomEnchants" && in_array("DaPigGuy", $description->getAuthors());
+        return $description->getName() === "SuperCustomEnchants" && in_array("xSuper", $description->getAuthors());
     }
 }
