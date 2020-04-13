@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants\tasks;
+namespace xSuper\PiggyCustomEnchants\tasks;
 
-use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\TickingEnchantment;
-use DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants;
-use DaPigGuy\PiggyCustomEnchants\utils\Utils;
+use xSuper\PiggyCustomEnchants\enchants\CustomEnchant;
+use xSuper\PiggyCustomEnchants\enchants\TickingEnchantment;
+use xSuper\PiggyCustomEnchants\PiggyCustomEnchants;
+use xSuper\PiggyCustomEnchants\utils\Utils;
 use pocketmine\item\Item;
 use pocketmine\nbt\tag\IntTag;
 use pocketmine\scheduler\Task;
