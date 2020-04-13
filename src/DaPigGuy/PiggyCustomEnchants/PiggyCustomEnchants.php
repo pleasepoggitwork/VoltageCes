@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants;
+namespace xSuper\PiggyCustomEnchants;
 
 use CortexPE\Commando\BaseCommand;
 use CortexPE\Commando\exception\HookAlreadyRegistered;
 use CortexPE\Commando\PacketHooker;
-use DaPigGuy\PiggyCustomEnchants\utils\Utils;
-use DaPigGuy\PiggyCustomEnchants\blocks\PiggyObsidian;
-use DaPigGuy\PiggyCustomEnchants\commands\CustomEnchantsCommand;
-use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant;
-use DaPigGuy\PiggyCustomEnchants\enchants\ToggleableEnchantment;
-use DaPigGuy\PiggyCustomEnchants\entities\HomingArrow;
-use DaPigGuy\PiggyCustomEnchants\entities\PiggyFireball;
-use DaPigGuy\PiggyCustomEnchants\entities\PiggyLightning;
-use DaPigGuy\PiggyCustomEnchants\entities\PiggyTNT;
-use DaPigGuy\PiggyCustomEnchants\entities\PiggyWitherSkull;
-use DaPigGuy\PiggyCustomEnchants\entities\PigProjectile;
-use DaPigGuy\PiggyCustomEnchants\tasks\CheckDisabledEnchantsTask;
-use DaPigGuy\PiggyCustomEnchants\tasks\CheckUpdatesTask;
-use DaPigGuy\PiggyCustomEnchants\tasks\TickEnchantmentsTask;
+use xSuper\PiggyCustomEnchants\utils\Utils;
+use xSuper\PiggyCustomEnchants\blocks\PiggyObsidian;
+use xSuper\PiggyCustomEnchants\commands\CustomEnchantsCommand;
+use xSuper\PiggyCustomEnchants\enchants\CustomEnchant;
+use xSuper\PiggyCustomEnchants\enchants\ToggleableEnchantment;
+use xSuper\PiggyCustomEnchants\entities\HomingArrow;
+use xSuper\PiggyCustomEnchants\entities\PiggyFireball;
+use xSuper\PiggyCustomEnchants\entities\PiggyLightning;
+use xSuper\PiggyCustomEnchants\entities\PiggyTNT;
+use xSuper\PiggyCustomEnchants\entities\PiggyWitherSkull;
+use xSuper\PiggyCustomEnchants\entities\PigProjectile;
+use xSuper\PiggyCustomEnchants\tasks\CheckDisabledEnchantsTask;
+use xSuper\PiggyCustomEnchants\tasks\CheckUpdatesTask;
+use xSuper\PiggyCustomEnchants\tasks\TickEnchantmentsTask;
 use jojoe77777\FormAPI\Form;
 use pocketmine\block\BlockFactory;
 use pocketmine\entity\Entity;
