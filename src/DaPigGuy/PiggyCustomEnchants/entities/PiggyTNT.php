@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants\entities;
+namespace xSuper\PiggyCustomEnchants\entities;
 
-use DaPigGuy\PiggyCustomEnchants\utils\PiggyExplosion;
+use xSuper\PiggyCustomEnchants\utils\PiggyExplosion;
 use pocketmine\entity\object\PrimedTNT;
 use pocketmine\event\entity\ExplosionPrimeEvent;
 use pocketmine\level\Position;
