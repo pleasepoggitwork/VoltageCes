@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants\utils;
+namespace xSuper\PiggyCustomEnchants\utils;
 
-use DaPigGuy\PiggyCustomEnchants\enchants\miscellaneous\RecursiveEnchant;
+use xSuper\PiggyCustomEnchants\enchants\miscellaneous\RecursiveEnchant;
 use pocketmine\block\TNT;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockUpdateEvent;
