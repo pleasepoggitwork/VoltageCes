@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DaPigGuy\PiggyCustomEnchants\utils;
+namespace xSuper\PiggyCustomEnchants\utils;
 
 use pocketmine\entity\projectile\Projectile;
 use pocketmine\item\Item;
